@@ -18,7 +18,7 @@ skill_list.forEach(select => {
 
         select.classList.add('active');
 
-
+        
         const dataFilter = select.getAttribute('data-filter');
 
         // get separated  from all & show in same group  
