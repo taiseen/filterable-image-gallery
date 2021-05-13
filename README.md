@@ -1,4 +1,4 @@
-# Filterable Image Gallery <|> [Live Link](https://taiseen.github.io/filterable-image-gallery)
+# Filterable Image Gallery <|> [Live Link](https://taiseen.github.io/filterable_image_gallery)
 
 ## JavaScript 
 * accessing HTML Node by classList 
