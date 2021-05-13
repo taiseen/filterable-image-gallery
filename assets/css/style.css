@@ -74,7 +74,6 @@
     justify-content: center;
     align-items    : center;
     text-align     : center;
-
 }
 
 .all_projects_container .projectBox.hide {
@@ -82,9 +81,7 @@
 }
 
 .all_projects_container .projectBox img {
-    position     : absolute;
-    top          : 0;
-    left         : 0;
+
     width        : 100%;
     height       : 100%;
     object-fit   : cover;
@@ -103,7 +100,6 @@
     transition: .2s linear;
     opacity   : .04;
     position  : absolute;
-
 }
 
 .all_projects_container .projectBox .text {
@@ -112,4 +108,127 @@
     font-size       : 1.5rem;
     padding         : 1rem 1.5rem;
     border-radius   : 5px;
+}
+
+
+/* Modal CSS */
+
+.modal_container {
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    width          : 100vw;
+    height         : 100vh;
+    background     : rgba(0, 0, 0, 0.3);
+    opacity        : 0;
+    pointer-events : none;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    z-index        : 100;
+}
+
+.modal_container.show {
+    opacity       : 1;
+    pointer-events: auto;
+}
+
+.modal_data {
+    background     : #fff;
+    width          : 65%;
+    height         : 60%;
+    padding        : 0 1.5rem;
+    padding-top    : 70px;
+    box-shadow     : 0 5px 5px rgba(0, 0, 0, .3);
+    border-radius  : 5px;
+    position       : relative;
+    display        : flex;
+    flex-flow      : row wrap;
+    justify-content: space-between;
+}
+
+.modal_data>h1 {
+    position     : absolute;
+    top          : 20px;
+    margin-bottom: 20px;
+    left         : 50%;
+    transform    : translate(-50%)
+}
+
+.modal_data .project_info {
+    display    : flex;
+    flex-flow  : column wrap;
+    align-items: flex-start;
+    font-size  : 1.5rem;
+}
+
+.modal_data .project_info ol {
+    margin-bottom: 20px;
+    margin-left  : 25px;
+    text-align   : left;
+}
+
+.modal_data .project_info ol li {
+    list-style: circle;
+}
+
+.slideImg {
+    /* position     : absolute;
+    top          : 40px;
+    right        : 30px; */
+    width        : 55%;
+    height       : 400px;
+    object-fit   : cover;
+    border-radius: 5px;
+    opacity      : 1;
+    
+}
+
+.slideImg>img {
+    width  : 100%;
+    opacity: 1;
+}
+
+.slideImg>img:hover {
+    opacity: 1;
+}
+
+
+.close_modal {
+    position     : absolute;
+    bottom       : 25px;
+    right        : 30px;
+    background   : tomato;
+    border-radius: 5px;
+    padding      : 10px 25px;
+    font-size    : 1.2rem;
+    box-shadow   : 0 5px 5px rgba(0, 0, 0, .2);
+    cursor       : pointer;
+    display      : none;
+}
+
+
+@media (max-width: 750px) {
+
+    .modal_data {
+        width    : 85%;
+        height   : 95%;
+        display  : flex;
+        flex-flow: row wrap;
+    }
+
+    .modal_data .project_info {
+        font-size: 1.3rem;
+    }
+
+    .slideImg {
+        order : -1;
+        width : 100%;
+        height: 200px;
+        margin-bottom: -70px;
+    }
+
+    .close_modal {
+        display: block;
+    }
 }

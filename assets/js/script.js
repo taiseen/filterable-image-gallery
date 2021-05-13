@@ -2,6 +2,7 @@
 
 let skill_list = document.querySelectorAll('.skill_list');
 let projectBox = document.querySelectorAll('.projectBox');
+let modal_container = document.querySelectorAll('.modal_container');
 
 
 // this loop is only use for  
@@ -18,7 +19,7 @@ skill_list.forEach(select => {
 
         select.classList.add('active');
 
-        
+
         const dataFilter = select.getAttribute('data-filter');
 
         // get separated  from all & show in same group  
@@ -42,11 +43,18 @@ skill_list.forEach(select => {
 });
 
 
+let displayModal = true;
 // direct access by clicking into specific Project
-projectBox.forEach(project => {
+// for modal toggling... 
+projectBox.forEach((project, idx) => {
 
     project.addEventListener('click', () => {
-        console.log(project)
+        if (displayModal) {
+            modal_container[idx].classList.add('show');
+            displayModal = false;
+        } else {
+            modal_container[idx].classList.remove('show');
+            displayModal = true;
+        }
     });
-
 });
