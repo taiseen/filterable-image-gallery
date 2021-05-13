@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/gallery.jpg" type="image/x-icon">
+    <title>Filterable Image Gallery</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<!-- 13-May-2021 -->
+
+<body>
+    <main>
+
+        <!-- Skills Menu Section -->
+        <section class="skill_with_projects_container">
+
+            <!-- ul>li.skill_list[data-filter="all"]*6>{data} -->
+            <ul>
+                <li class="skill_list active" data-filter="all">ALL</li>
+                <li class="skill_list" data-filter="html">HTML + CSS</li>
+                <li class="skill_list" data-filter="js">JavaScript</li>
+                <li class="skill_list" data-filter="react">React</li>
+                <li class="skill_list" data-filter="nodeJs">NodeJs</li>
+                <li class="skill_list" data-filter="mongoDB">MongoDB</li>
+            </ul>
+
+            <div class="all_projects_container">
+
+                <!-- .projectBox[data-item="html"]>img[src="./assets/img/html.jpg"] -->
+
+                <div class="projectBox" data-item="html">
+                    <img src="./assets/img/html.jpg" alt="">
+                    <div class="middle">
+                        <div class="text">click for details...</div>
+                      </div>
+                </div>
+                <div class="projectBox" data-item="js">
+                    <img src="./assets/img/js.jpg" alt="">
+                    <div class="middle">
+                        <div class="text">click for details...</div>
+                      </div>
+                </div>
+                <div class="projectBox" data-item="react">
+                    <img src="./assets/img/react.png" alt="">
+                    <div class="middle">
+                        <div class="text">click for details...</div>
+                      </div>
+                </div>
+                <div class="projectBox" data-item="nodeJs">
+                    <img src="./assets/img/nodeJs.jpg" alt="">
+                    <div class="middle">
+                        <div class="text">click for details...</div>
+                      </div>
+                </div>
+                <div class="projectBox" data-item="mongoDB">
+                    <img src="./assets/img/mongoDB.jpeg" alt="">
+                    <div class="middle">
+                        <div class="text">click for details...</div>
+                      </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
